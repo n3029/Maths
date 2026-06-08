@@ -685,12 +685,361 @@ const QUESTIONS = [
     explanation: "Based on the context provided, the answer is Madagascar."
    },
 
+  // ==================== MATHEMATICS / QUANTITATIVE ====================
+  {
+    text: "Yashu can copy a book in 20 days. Working 12 hours per day, how many hours per day should he work to finish the work in 16 days?",
+    options: ["12 hours", "15 hours", "13 hours", "11 hours"],
+    answer: 1,
+    explanation: "Total work required = 20 days × 12 hours/day = 240 hours. To complete it in 16 days, he needs to work 240 / 16 = 15 hours per day."
+  },
+  {
+    text: "In a mixture of milk and water, the ratio of milk to water is 3:1 respectively. If there are 48 litres of mixture in total, how much milk is there in the mixture?",
+    options: ["34 litres", "20 litres", "30 litres", "36 litres"],
+    answer: 3,
+    explanation: "Total parts in the ratio = 3 + 1 = 4. The quantity of milk is (3/4) × 48 = 36 litres."
+  },
+  {
+    text: "In a rhombus, one diagonal is 40 cm and the other diagonal is 22 cm longer than half the first diagonal. Find the length of each side of the rhombus.",
+    options: ["12 cm", "16 cm", "25 cm", "29 cm"],
+    answer: 3,
+    explanation: "Let the first diagonal d1 = 40 cm. Half of d1 is 20 cm. The second diagonal d2 = 20 + 22 = 42 cm. The side of a rhombus = √((d1/2)² + (d2/2)²) = √(20² + 21²) = √(400 + 441) = √841 = 29 cm."
+  },
+  {
+    text: "Riya invests ₹ 10,000 in a savings account that offers an annual compound interest rate of 8%, compounded yearly. How much money will she have in the account after 3 years?",
+    options: ["₹ 12,597.12", "₹ 12,845.34", "₹ 12,333.21", "₹ 12,450.23"],
+    answer: 0,
+    explanation: "Amount = P(1 + R/100)^T = 10000 × (1 + 8/100)³ = 10000 × (1.08)³ = 10000 × 1.259712 = ₹ 12,597.12."
+  },
+  {
+    text: "What is the unit digit in the expansion of (478749)^(1×5×2×4)?",
+    options: ["1", "3", "9", "4"],
+    answer: 0,
+    explanation: "The exponent simplifies to 1 × 5 × 2 × 4 = 40. The base ends in 9. For any number ending in 9, an even power will always result in a unit digit of 1 (e.g., 9² = 81)."
+  },
+  {
+    text: "If the HCF of two numbers is 16, which of the following values can never be their LCM?",
+    options: ["80", "112", "134", "48"],
+    answer: 2,
+    explanation: "The LCM of two numbers must always be exactly divisible by their HCF. Among the options, 134 is not divisible by 16 (134 / 16 = 8.375), making it the correct answer."
+  },
+  {
+    text: "If 20% of a number is 50, what is 125% of that number?",
+    options: ["292.5", "312.5", "322.5", "252.5"],
+    answer: 1,
+    explanation: "Let the number be x. 0.20x = 50, so x = 250. Then, 125% of 250 = 1.25 × 250 = 312.5."
+  },
+  {
+    text: "Simplify: 49 × (123 ÷ 3) + 13 × 25",
+    options: ["2424", "2334", "2326", "2846"],
+    answer: 1,
+    explanation: "According to BODMAS: First solve the bracket (123 ÷ 3) = 41. Then multiply: 49 × 41 = 2009, and 13 × 25 = 325. Add them: 2009 + 325 = 2334."
+  },
+  {
+    text: "The symbols given represent the following operations on a number:\n(Note: Each symbol operates on the current number, which is the result of the previous operation)\n+ means add 2\n- means subtract 1\n* means multiply by 6\n@ means reverse the digits\n# means divide by 3\nFind the value of expression 5 * + @ - * #",
+    options: ["40", "44", "47", "41"],
+    answer: 1,
+    explanation: "Starting with 5: '*' (5×6 = 30), '+' (30+2 = 32), '@' (reverse 32 = 23), '-' (23-1 = 22), '*' (22×6 = 132), '#' (132/3 = 44). The final value is 44."
+  },
+
+  // ==================== REASONING & ANALYTICS ====================
+  {
+    text: "Arrange the following words in correct English alphabetical (dictionary) order:\nBalance, Banana, Band, Bank, Banner",
+    options: ["Balance, Banana, Band, Bank, Banner", "Balance, Band, Bank, Banner, Banana", "Balance, Banana, Bank, Banner, Band", "Balance, Banana, Bank, Band, Banner"],
+    answer: 0,
+    explanation: "Alphabetical order compares word letters sequentially: Bal..., Banan..., Band..., Bank..., Bann... The naturally given list is already in order."
+  },
+  {
+    text: "If the word 'KNOWLEDGE' is written as 'MP4YN2FI2' and 'AFFECT' is written as '1HH2EV' in a certain code, then how will 'TEST' be written in the same code?",
+    options: ["UV2V", "V2VU", "U2VV", "V2UV"],
+    answer: 3,
+    explanation: "Consonants are shifted forward by 2 letters (T -> V, S -> U). Vowels are replaced by numbers representing their position in the vowel sequence (A=1, E=2, I=3, O=4, U=5). TEST becomes V 2 U V."
+  },
+  {
+    text: "Which of the following words cannot be formed from the letters of the word 'ADVERTISEMENT', without repeating letters?",
+    options: ["ADVANCE", "INVEST", "DREAM", "REST"],
+    answer: 0,
+    explanation: "The word 'ADVANCE' requires the letter 'C', which is absent in the word 'ADVERTISEMENT'."
+  },
+  {
+    text: "Starting from a point, Karan moves 6 km in one direction and then 8 km at a right angle to his initial path. What is the direct distance between his starting point and his final position?",
+    options: ["9 km", "12 km", "15 km", "10 km"],
+    answer: 3,
+    explanation: "Applying Pythagoras' theorem for the right-angled path: Distance = √(6² + 8²) = √(36 + 64) = √100 = 10 km."
+  },
+  {
+    text: "A question along with a set of statements is given. Find which of the given statements is/are sufficient to answer the given question.\nQuestion: Find the perimeter of a triangle given that:\nI. Area of the triangle is 24 sq. units.\nII. Height of the triangle is 4 units.",
+    options: ["Statement II alone is sufficient", "Statement I alone is sufficient", "Both Statement I and Statement II together are not sufficient", "Both Statement I and Statement II together are sufficient"],
+    answer: 2,
+    explanation: "Using the area (24) and height (4), we can only find the base (1/2 × base × 4 = 24 -> base = 12). However, without the other two sides or the angles, the perimeter cannot be determined."
+  },
+  {
+    text: "Ajit walks 2 km towards East and then he turns South and walks 16 km. Then he turns East and walks 5 km. Now, in which direction is he from his starting point?",
+    options: ["North-West", "South-West", "South-East", "North-East"],
+    answer: 2,
+    explanation: "His total movement is 7 km East (2 + 5) and 16 km South. Comparing to his start point, he is positioned in the South-East direction."
+  },
+  {
+    text: "Which of the following words can be formed using the letters of the word 'FINAGLE' without repeating any letters?",
+    options: ["LEARN", "ANGLE", "FINGER", "FELINE"],
+    answer: 1,
+    explanation: "The word 'ANGLE' uses the letters A, N, G, L, E, all of which are available in 'FINAGLE'."
+  },
+  {
+    text: "Which of the following meaningful words can be formed by rearranging all the letters 'CEITRHYMS' without repetition?",
+    options: ["CHEMISTRY", "SYNTHESIS", "SYMMETRY", "CHEMICAL"],
+    answer: 0,
+    explanation: "Rearranging the exact letters C, E, I, T, R, H, Y, M, S yields the valid word 'CHEMISTRY'."
+  },
+  {
+    text: "Find the next term in the following series:\nE, F, H, K, P, ?",
+    options: ["T", "U", "X", "V"],
+    answer: 2,
+    explanation: "Positional values: E(5), F(6), H(8), K(11), P(16). Differences are 1, 2, 3, 5 (a Fibonacci-like additive sequence where 1+2=3, 2+3=5). The next difference is 3+5=8. 16 + 8 = 24, which corresponds to X."
+  },
+
+  // ==================== GENERAL KNOWLEDGE / AWARENESS ====================
+  {
+    text: "When is 'National Startup Day' celebrated annually in India?",
+    options: ["January 16", "January 10", "February 17", "February 18"],
+    answer: 0,
+    explanation: "National Startup Day was declared by the Indian government to be observed annually on January 16."
+  },
+  {
+    text: "'It's All in the Planets', a novel exploring love, fate and relationships, is written by ______.",
+    options: ["Preeti Shenoy", "Shashi Tharoor", "Sudha Murty", "V.S. Naipaul"],
+    answer: 0,
+    explanation: "The novel 'It's All in the Planets' was authored by prominent Indian writer Preeti Shenoy."
+  },
+  {
+    text: "The 'Dhokra' metal craft, one of the world's oldest known non-ferrous metal casting traditions, uses which ancient technique to create tribal and folk art objects?",
+    options: ["Centrifugal casting", "Electroplating", "Lost-wax casting", "Die casting"],
+    answer: 2,
+    explanation: "Dhokra craft relies on the traditional 'lost-wax casting' technique, a method dating back to the Mohenjo-daro civilization."
+  },
+  {
+    text: "Which pigment is responsible for the green colour of plants?",
+    options: ["Chlorophyll", "Carotene", "Xanthophyll", "Haemoglobin"],
+    answer: 0,
+    explanation: "Chlorophyll is the primary pigment found in chloroplasts that gives plants their green colour and aids in photosynthesis."
+  },
+  {
+    text: "How many tehsils are there in Ballia district of Uttar Pradesh for administrative and revenue purposes?",
+    options: ["5", "6", "7", "4"],
+    answer: 1,
+    explanation: "Ballia district is administratively divided into 6 tehsils: Ballia, Bansdih, Rasra, Bairia, Sikandarpur, and Belthara Road."
+  },
+  {
+    text: "India's nuclear energy programme is based on how many stages?",
+    options: ["3 stages", "1 stage", "5 stages", "4 stages"],
+    answer: 0,
+    explanation: "Formulated by Dr. Homi Bhabha, India's nuclear power initiative is famously known as the three-stage nuclear power programme."
+  },
+  {
+    text: "The severe tropical cyclone Narelle, which struck in March 2026, affected which country?",
+    options: ["Australia", "Madagascar", "Russia", "Philippines"],
+    answer: 0,
+    explanation: "Tropical Cyclone Narelle historically and primarily impacted the coast of Australia."
+  },
+  {
+    text: "Where is the headquarters of the 'World Anti-Doping Agency (WADA)' located?",
+    options: ["Geneva, Switzerland", "Montreal, Canada", "Paris, France", "New York, USA"],
+    answer: 1,
+    explanation: "WADA's global headquarters are situated in Montreal, Quebec, Canada."
+  },
+  {
+    text: "Which institution secured a patent for machine learning technology to decode rainfall from atmospheric radar signals?",
+    options: ["Cochin University of Science and Technology", "Indian Institute of Science", "Anna University", "Indian Institute of Technology, Delhi"],
+    answer: 0,
+    explanation: "CUSAT (Cochin University of Science and Technology) researchers achieved this milestone in atmospheric radar signal decoding."
+  },
+  {
+    text: "World Food Day, observed annually on 16 October, is dedicated to raising awareness about ______.",
+    options: ["Climate change and wildlife conservation", "Industrial growth and urban development", "Hunger, food security, nutrition and sustainable agricultural practices", "Space research, satellite technology and scientific innovation"],
+    answer: 2,
+    explanation: "The day marks the founding of the FAO and aims to tackle global hunger while promoting food security and nutritious diets."
+  },
+  {
+    text: "As of October 2025, what is the highest GST slab rate in India, as decided by the GST Council?",
+    options: ["35%", "40%", "18%", "28%"],
+    answer: 3,
+    explanation: "The standard GST structure in India maxes out at a 28% slab rate for luxury and sin goods."
+  },
+  {
+    text: "Barua Sagar Lake is located in which district of Uttar Pradesh?",
+    options: ["Jhansi", "Lucknow", "Agra", "Varanasi"],
+    answer: 0,
+    explanation: "Barua Sagar Lake is a historical lake situated near the town of Barua Sagar in the Jhansi district."
+  },
+  {
+    text: "Kanwar Lake is located in which state of India?",
+    options: ["Madhya Pradesh", "West Bengal", "Bihar", "Karnataka"],
+    answer: 2,
+    explanation: "Kanwar Lake (or Kabartal Lake) is located in Begusarai, Bihar, and is recognized as Asia's largest freshwater oxbow lake."
+  },
+  {
+    text: "Which of the following rivers flows through the city of Paris?",
+    options: ["Amazon", "Loire", "Danube", "Seine"],
+    answer: 3,
+    explanation: "The Seine river is the iconic waterway that flows directly through the heart of Paris, France."
+  },
+
+  // ==================== HINDI GRAMMAR ====================
+  {
+    text: "'भाला' शब्द का बहुवचन बदलिए :",
+    options: ["भालिनी", "भालाएं", "भाले", "भालिने"],
+    answer: 2,
+    explanation: "'भाला' एक आकारांत पुल्लिंग शब्द है, और ऐसे शब्दों का बहुवचन अंत में 'ए' लगाकर बनाया जाता है (जैसे: भाला -> भाले)।"
+  },
+  {
+    text: "'आगे कुआँ, पीछे खाई' मुहावरे का अर्थ है :",
+    options: ["दोनों तरफ विपत्ति या परेशानी होना", "साथ मिलकर न रहना", "जीवन में विपत्ति सब पर आती है", "बुद्धि से काम न लेना"],
+    answer: 0,
+    explanation: "इस मुहावरे का प्रयोग तब किया जाता है जब व्यक्ति हर तरफ से मुसीबत या संकट में फँस जाता है।"
+  },
+  {
+    text: "निम्नलिखित में से कौन-सा अव्ययीभाव समास का उदाहरण है?",
+    options: ["संत-बंत", "घर-द्वार", "कर्म-धर्म", "धीरे-धीरे"],
+    answer: 3,
+    explanation: "जब किसी शब्द की पुनरावृत्ति होती है और वह अव्यय की तरह कार्य करता है (जैसे 'धीरे-धीरे', 'बार-बार'), तो वहाँ अव्ययीभाव समास होता है।"
+  },
+ 
+  // ==================== GENERAL KNOWLEDGE / AWARENESS ====================
+  {
+    text: "Farming has varied from subsistence to ________ type.",
+    options: ["Digital", "Commercial", "Marine", "Extensive"],
+    answer: 1,
+    explanation: "Farming practices primarily range from subsistence farming (growing just enough for the farmer's family) to commercial farming (growing crops for market sale)."
+  },
+  {
+    text: "In March 2026, who was appointed as the Ambassador of India to the People's Republic of China?",
+    options: ["Taranjit Singh Sandhu", "Vinay Mohan Kwatra", "Vikram K. Doraiswami", "Harsh Vardhan Shringla"],
+    answer: 1,
+    explanation: "According to the provided question context, Vinay Mohan Kwatra was assigned as the Ambassador."
+  },
+  {
+    text: "Which platform is mainly used for professional networking?",
+    options: ["Instagram", "LinkedIn", "Facebook", "Snapchat"],
+    answer: 1,
+    explanation: "LinkedIn is specifically designed for professional networking, career development, and job searching."
+  },
+  {
+    text: "Which of the following environmental issues is primarily caused by the emission of greenhouse gases?",
+    options: ["Ozone depletion", "Acid rain", "Deforestation", "Global warming"],
+    answer: 3,
+    explanation: "The accumulation of greenhouse gases (like CO2, Methane) traps heat in the atmosphere, primarily causing global warming."
+  },
+  {
+    text: "The Lascaux Caves are located in which country?",
+    options: ["Spain", "Germany", "Italy", "France"],
+    answer: 3,
+    explanation: "The Lascaux Caves, famous for their Paleolithic cave paintings, are located in southwestern France."
+  },
+
+  // ==================== MATHEMATICS / QUANTITATIVE ====================
+  {
+    text: "A 246 metre long train crosses a pillar in 30 seconds. Find the speed of the train in km/h.",
+    options: ["47.55 km/h", "29.52 km/h", "51.5 km/h", "33.6 km/h"],
+    answer: 1,
+    explanation: "Speed in m/s = Distance / Time = 246 / 30 = 8.2 m/s. To convert to km/h, multiply by 18/5: 8.2 × (18 / 5) = 29.52 km/h."
+  },
+  {
+    text: "One-third of a number is 12 and then the number is increased by 6. What is one-fourth of the new number?",
+    options: ["15.5", "10.5", "7.5", "12"],
+    answer: 1,
+    explanation: "Let the number be x. (1/3)x = 12, so x = 36. The new number is 36 + 6 = 42. One-fourth of 42 = 42 / 4 = 10.5."
+  },
+  {
+    text: "A reservoir can be completely filled in 18 hours by an inlet pipe. A leakage pipe can empty the full reservoir in 36 hours. If both pipes are opened together, find the time required to fill the reservoir.",
+    options: ["20 hours", "36 hours", "24 hours", "18 hours"],
+    answer: 1,
+    explanation: "Net filling rate per hour = (1 / 18) - (1 / 36) = (2 - 1) / 36 = 1 / 36. Therefore, it will take 36 hours to completely fill the reservoir."
+  },
+
+  // ==================== REASONING & ANALYTICS ====================
+  {
+    text: "An object is initially facing East. It undergoes the given below sequence of turns: 1. Turns 145 degrees counter clockwise. 2. Then turns 190 degrees clockwise. 3. Finally, turns 135 degrees counter clockwise. In which direction is the object facing finally?",
+    options: ["North", "West", "East", "North-West"],
+    answer: 0,
+    explanation: "Net rotation = +145° (CCW) - 190° (CW) + 135° (CCW) = 280° - 190° = +90° (CCW). Turning 90 degrees counter-clockwise from East results in facing North."
+  },
+  {
+    text: "Identify the term that should come in the blank space to continue the logical sequence.\nXYZ, YZA, ZAB, ____, BCD, CDE",
+    options: ["ZAC", "ABC", "ZYA", "ACB"],
+    answer: 1,
+    explanation: "The pattern shifts each letter forward by 1 in the alphabet cyclically. XYZ -> YZA -> ZAB -> ABC -> BCD -> CDE."
+  },
+  {
+    text: "Identify the word that cannot be formed using the letters of the word 'MINORITY', without repeating any letter more times than it appears in the original word.",
+    options: ["MINOR", "UNITY", "INTRO", "IRON"],
+    answer: 1,
+    explanation: "The word 'UNITY' requires the letter 'U', which is not present in the word 'MINORITY'."
+  },
+  {
+    text: "In a certain code language, 'STONE' is written as 'TSPMF' and 'BRAVE' is coded as 'CQBUF'. How will 'WHILE' be written in the same code language?",
+    options: ["FGISK", "XGJKF", "XJGFK", "UFHKG"],
+    answer: 1,
+    explanation: "The letters shift alternately by +1 and -1. S(+1)=T, T(-1)=S, O(+1)=P, N(-1)=M, E(+1)=F. Applying the same to WHILE: W(+1)=X, H(-1)=G, I(+1)=J, L(-1)=K, E(+1)=F. So, it becomes XGJKF."
+  },
+  {
+    text: "Based on the given information, answer the question:\nThe report was submitted at 9:00 AM. The meeting started 2 hours after the report was submitted. A break was taken 1 hour after the meeting ended and the meeting ended at 11:30 AM. At what time did the meeting start?",
+    options: ["10:30 AM", "11:10 AM", "11:00 AM", "10:00 AM"],
+    answer: 2,
+    explanation: "The report was submitted at 9:00 AM. The meeting started exactly 2 hours after this submission, which makes the start time 9:00 AM + 2 hours = 11:00 AM."
+  },
+
+  // ==================== HINDI GRAMMAR ====================
+  {
+    text: "'आनुषंगिक' के विलोम शब्द का चयन कीजिए :",
+    options: ["अल्पजीवी", "विमुख", "निरामिष", "प्रमुख"],
+    answer: 3,
+    explanation: "'आनुषंगिक' (गौण या Secondary) का सही विलोम 'प्रमुख' (Primary) होता है।"
+  },
+  {
+    text: "उपसर्ग वह शब्दांश है, जो :",
+    options: ["किसी शब्द के मध्य में जुड़ता है", "शब्द में कहीं भी जुड़ सकता है", "किसी शब्द के आगे जुड़ता है", "किसी शब्द के बाद में जुड़ता है"],
+    answer: 2,
+    explanation: "उपसर्ग (Prefix) वे शब्दांश होते हैं जो किसी मूल शब्द के आरंभ (आगे) में जुड़कर उसके अर्थ में परिवर्तन या विशेषता लाते हैं।"
+  },
  
  
- 
- 
- 
- 
+
+  // ==================== REASONING & ANALYTICS ====================
+  {
+    text: "If 8 insects and 2 creatures together have 10 heads and each insect has 1 head, how many heads do 2 creatures together have?",
+    options: ["2", "1", "3", "4"],
+    answer: 0,
+    explanation: "8 insects have 8 × 1 = 8 heads. The total number of heads is 10. Therefore, the 2 creatures must have 10 - 8 = 2 heads together."
+  },
+  {
+    text: "The average age of a husband, his wife and their child 4 years ago was 30 years. The average age of the wife and the child 6 years ago was 22 years. Find the present age of the husband.",
+    options: ["48 years", "42 years", "46 years", "44 years"],
+    answer: 2,
+    explanation: "Sum of present ages of Husband, Wife, and Child = (30 × 3) + (3 × 4) = 90 + 12 = 102 years. Sum of present ages of Wife and Child = (22 × 2) + (2 × 6) = 44 + 12 = 56 years. Present age of Husband = 102 - 56 = 46 years."
+  },
+  {
+    text: "What is the water image of the given figure if the water surface is located just below the figure?\nFigure: 1OMOON8",
+    options: ["8NOOMOI", "IOWOOИ8", "8NOOWOI", "JOMOON8"],
+    answer: 1,
+    explanation: "In a water image, the top and bottom of the characters are inverted while the left-to-right order remains the same. '1' inverts vertically, 'O' remains 'O', 'M' inverts to 'W', 'N' inverts diagonally, and '8' remains '8'. The sequence forms 'IOWOOИ8'."
+  },
+  {
+    text: "Carefully observe the pattern in the arrangement of symbols and notice how each term shifts from the previous one. Use this repeating order to identify the correct term that comes next in the sequence from the given options.\nSequence: %?> , ?>% , >%? , %?> , _____",
+    options: ["?>%", "%?>", ">%?", "%%?"],
+    answer: 0,
+    explanation: "The symbols undergo a cyclic shift to the left by one position in each step. '%?>' becomes '?>%', which then becomes '>%?', and then returns to '%?>'. The next term following '%?>' will naturally be '?>%'."
+  },
+  {
+    text: "There are 4 people S, D, K and L sitting in a row facing North. If D and K are sitting at the left end and right end respectively, S is sitting second from the left end, then how many people are sitting to the right of S?",
+    options: ["1", "4", "2", "3"],
+    answer: 2,
+    explanation: "Based on the given positions, the arrangement from left to right is: D (left end), S (second from left), L (third), K (right end). There are 2 people (L and K) sitting to the right of S."
+  },
+  {
+    text: "If P is the daughter of Q's father, then how is P related to Q?",
+    options: ["Wife", "Mother", "Grandmother", "Sister"],
+    answer: 3,
+    explanation: "The daughter of Q's father would be Q's sister (sharing the same father)."
+  },
  
  
  
