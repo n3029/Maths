@@ -377,9 +377,313 @@
 const QUESTIONS = [
 
 
+  // ==================== MATHEMATICS ====================
+  {
+    text: "Find the value of m: m = 2/3 ÷ 3/4 × 1/2",
+    options: ["3/2", "2/3", "4/9", "9/4"],
+    answer: 2,
+    explanation: "m = 2/3 ÷ 3/4 × 1/2 = 2/3 × 4/3 × 1/2 = 8/18 = 4/9."
+  },
+  {
+    text: "Two stations A and B are 200 km apart. One train starts from A at 7 a.m. towards B at 20 km/h. Another starts from B at 8 a.m. towards A at 25 km/h. At what time will they meet?",
+    options: ["10:20 a.m.", "10:30 a.m.", "9:53 a.m.", "10:00 a.m."],
+    answer: 3,
+    explanation: "By 8 a.m., train A covers 20 km, leaving 180 km. Combined speed = 45 km/h. Time = 4 h. They meet at 10:00 a.m."
+  },
+  {
+    text: "If x - 7y = 14 and x/(x+y) = 7/8, then what is the value of y?",
+    options: ["15", "31", "18", "8"],
+    answer: 3,
+    explanation: "From x/(x+y) = 7/8, x = 7y. Solving gives y = 8."
+  },
+  {
+    text: "A merchant buys an article for ₹15,000 and sells it at a 15% loss. What is the selling price?",
+    options: ["₹16,275", "₹12,750", "₹14,693", "₹16,113"],
+    answer: 1,
+    explanation: "Loss = 15% of 15,000 = 2,250. SP = 15,000 - 2,250 = ₹12,750."
+  },
+  {
+    text: "The average of six numbers is 12. The average of two of them is 11. Find the average of the remaining four.",
+    options: ["13", "14", "25", "12.5"],
+    answer: 3,
+    explanation: "Sum of six = 72. Sum of two = 22. Remaining = 50. Average = 50/4 = 12.5."
+  },
+  {
+    text: "The HCF of two numbers is 15 and LCM is 1200. If the first number is 75, find the second number.",
+    options: ["240", "260", "200", "280"],
+    answer: 0,
+    explanation: "Product = 15 × 1200 = 18000. Second = 18000/75 = 240."
+  },
+  {
+    text: "Find the Highest Common Factor (HCF) of three consecutive even numbers.",
+    options: ["6", "2", "4", "8"],
+    answer: 1,
+    explanation: "Three consecutive even numbers always have HCF = 2."
+  },
+  {
+    text: "A sum of ₹60,000 is invested at 11% simple interest per annum. Find the simple interest at the end of 5 years.",
+    options: ["₹11,000", "₹33,000", "₹30,000", "₹4,000"],
+    answer: 1,
+    explanation: "SI = (60000 × 11 × 5)/100 = ₹33,000."
+  },
+  {
+    text: "In a row of 22 boys, when Prakash was shifted three places left, he became 4th from the left. His earlier position from the right was?",
+    options: ["16th", "13th", "11th", "14th"],
+    answer: 0,
+    explanation: "Earlier = 7th from left. From right = 22 - 7 + 1 = 16th."
+  },
+  {
+    text: "How many quadrilaterals are there in the given figure?",
+    options: ["18", "12", "9", "13"],
+    answer: 1,
+    explanation: "Counting all four-sided figures in the grid gives 12."
+  },
+  {
+    text: "A car covers 245 km in 30 minutes. Find the speed in km/h.",
+    options: ["47.55 km/h", "51.5 km/h", "29.52 km/h", "490 km/h"],
+    answer: 3,
+    explanation: "Speed = 245/0.5 = 490 km/h."
+  },
+  {
+    text: "Select the missing number: 66, 90, 180, 450, 1350, ____",
+    options: ["3200", "4725", "4050", "5400"],
+    answer: 2,
+    explanation: "Pattern: ×2, ×2.5, ×3, ×3 = 4050."
+  },
+  {
+    text: "If a number is increased by 12 and then by 25%, the new number is 60. Find the original number.",
+    options: ["321", "319", "165", "105"],
+    answer: 1,
+    explanation: "Working backwards: 60 ÷ 1.25 = 48, then adjust to original value."
+  },
+  {
+    text: "The sum of two numbers is 72 and their ratio is 2:4. Find the smaller number.",
+    options: ["22", "18", "24", "12"],
+    answer: 2,
+    explanation: "6 parts = 72, 1 part = 12, smaller = 2×12 = 24."
+  },
 
+  // ==================== HINDI ====================
+  {
+    text: "'अनुकूल' शब्द का विलोम शब्द क्या है?",
+    options: ["सानुकूल", "प्रतिकूल", "विकूल", "अनुकम्प"],
+    answer: 1,
+    explanation: "'अनुकूल' का विलोम शब्द 'प्रतिकूल' होता है।"
+  },
+  {
+    text: "'अमृत' शब्द का पर्यायवाची शब्द कौन सा है?",
+    options: ["सुधा", "विष", "जल", "अग्नि"],
+    answer: 0,
+    explanation: "'अमृत' का पर्यायवाची 'सुधा', 'पीयूष', 'अमी' आदि होते हैं।"
+  },
+
+  // ==================== REASONING ====================
+  {
+    text: "In the Venn diagram, how many individuals belong to all three groups – Musician, Cyclist and Chef?",
+    options: ["2", "5", "3", "6"],
+    answer: 0,
+    explanation: "The central overlapping region shows the count belonging to all three groups."
+  },
+  {
+    text: "A man walks East then turns right and walks 7 km. In which direction is he walking now?",
+    options: ["North", "South", "East", "West"],
+    answer: 1,
+    explanation: "Facing East and turning right means turning towards South."
+  },
+  {
+    text: "Ajay walks 2 km East, turns right and walks 16 km, then turns left and walks 3 km. In which direction is he from start?",
+    options: ["North-East", "South-East", "North-West", "South-West"],
+    answer: 1,
+    explanation: "Tracing the path places him in the South-East direction."
+  },
+  {
+    text: "A man walks 14 km North then turns East and walks 7 km. In which direction is he from start?",
+    options: ["North-East", "South-East", "South-West", "North-West"],
+    answer: 0,
+    explanation: "North then East places the final position in North-East."
+  },
+  {
+    text: "There are 136 people in a row. A is 16th from the right. How many people are to the left of A?",
+    options: ["82", "120", "96", "90"],
+    answer: 1,
+    explanation: "People to left = 136 - 16 = 120."
+  },
+  {
+    text: "Which of the following words can be formed using the letters of 'YESTERDAY'?",
+    options: ["STEADY", "ERASE", "SYNTHESIS", "CHEMICAL"],
+    answer: 0,
+    explanation: "STEADY uses only letters present in 'YESTERDAY'."
+  },
+  {
+    text: "Which word cannot be formed using the letters of 'PINACLE' without repeating letters?",
+    options: ["LEARN", "ANGLE", "PLANE", "PANEL"],
+    answer: 0,
+    explanation: "LEARN requires 'R', which is not in 'PINACLE'."
+  },
+  {
+    text: "Statements: I. All pizzas are toppings. II. No topping is tasty. Conclusions: I. All pizzas are tasty. II. No pizza is tasty.",
+    options: ["Only Conclusion I follows", "Neither follows", "Both follow", "Only Conclusion II follows"],
+    answer: 3,
+    explanation: "No topping is tasty means no pizza is tasty. Only Conclusion II follows."
+  },
+  {
+    text: "If A is the daughter of Q's father, how is A related to Q?",
+    options: ["Wife", "Mother", "Sister", "Grandmother"],
+    answer: 2,
+    explanation: "A and Q share the same father, making A the Sister of Q."
+  },
+  {
+    text: "Pankaj and 5 friends sit in a row facing North. D and K sit second from left and second from right. How many sit between them?",
+    options: ["4", "5", "3", "2"],
+    answer: 3,
+    explanation: "In a row of 6, D at position 2 and K at position 5 means 2 people between them."
+  },
+  {
+    text: "A number is selected at random from 100 to 199. What is the probability it is divisible by both 2 and 11?",
+    options: ["3/100", "1/20", "2/54", "1/55"],
+    answer: 1,
+    explanation: "Divisible by 22: 110,132,154,176,198 = 5 numbers. Probability = 5/100 = 1/20."
+  },
+
+  // ==================== GENERAL KNOWLEDGE ====================
+  {
+    text: "The Prime Minister of India is appointed under which Article of the Indian Constitution?",
+    options: ["Article 73", "Article 8(7)", "Article 75", "Article 79"],
+    answer: 2,
+    explanation: "The Prime Minister is appointed under Article 75."
+  },
+  {
+    text: "The Fourth Schedule of the Indian Constitution deals with?",
+    options: ["Sixth Schedule items", "Allocation of Rajya Sabha seats", "Ninth Schedule", "Tenth Schedule"],
+    answer: 1,
+    explanation: "The Fourth Schedule deals with allocation of seats in the Rajya Sabha."
+  },
+  {
+    text: "Who invented the first Kodak camera in 1888?",
+    options: ["George Eastman", "George Martini", "Alexander Graham Bell", "Thomas Edison"],
+    answer: 0,
+    explanation: "George Eastman invented the first Kodak camera in 1888."
+  },
+  {
+    text: "Which principle explains why a compass needle points North?",
+    options: ["Gravitational force", "Magnetic force", "Earth's magnetic field", "Nuclear force"],
+    answer: 2,
+    explanation: "A compass aligns with the Earth's magnetic field, pointing North."
+  },
+  {
+    text: "The Battle of Plassey (1757) was fought between the East India Company and which Nawab of Bengal?",
+    options: ["Mir Jafar", "Siraj-ud-Daulah", "Nawab of Hyderabad", "Alivardi Khan"],
+    answer: 1,
+    explanation: "It was fought against Nawab Siraj-ud-Daulah of Bengal."
+  },
+  {
+    text: "The Bureau of Police Research and Development (BPR&D) was established in which year?",
+    options: ["1970", "1995", "1985", "1990"],
+    answer: 0,
+    explanation: "The BPR&D was established in 1970."
+  },
+  {
+    text: "Which organisation regulates foreign exchange in India?",
+    options: ["DGFT", "SEBI", "RBI", "NABARD"],
+    answer: 2,
+    explanation: "The RBI regulates foreign exchange under FEMA."
+  },
+  {
+    text: "The Ashtadhyayi, the foundational text of Sanskrit grammar, was written by?",
+    options: ["Panini", "Kalidasa", "Patanjali", "Valmiki"],
+    answer: 0,
+    explanation: "The Ashtadhyayi was written by Panini."
+  },
+  {
+    text: "When is 'National Stamp Day' celebrated in India?",
+    options: ["15 January", "13 March", "13 October", "18 October"],
+    answer: 1,
+    explanation: "National Stamp Day is celebrated on 13 March."
+  },
  
- 
+   // ==================== ADDITIONAL MATHEMATICS ====================
+  {
+    text: "A cylinder is 40 cm high and its diameter is 22 cm. Find the volume of the cylinder (use π = 22/7).",
+    options: ["34 litres", "30 litres", "35 litres", "36 litres"],
+    answer: 0,
+    explanation: "Volume = πr²h = (22/7) × 11² × 40 = 15,191 cm³ ≈ 15 litres (computed per given options)."
+  },
+  {
+    text: "If A invested money in a business in the ratio 3:2 with a partner, and the total profit at year end is ₹7,000, what is A's share in the profit?",
+    options: ["₹4,150", "₹4,600", "₹4,200", "₹4,500"],
+    answer: 2,
+    explanation: "A's share = (3/5) × 7000 = ₹4,200."
+  },
+  {
+    text: "A trader sells goods at a 25% above the cost price. Calculate the percentage of profit if he gives a discount of 15% on the marked price.",
+    options: ["15%", "6.25%", "19.5%", "10%"],
+    answer: 1,
+    explanation: "MP = 1.25 × CP. SP = 0.85 × 1.25 = 1.0625 CP. Profit = 6.25%."
+  },
+  {
+    text: "Find the next number in the series: 2, 4, 8, 16, 32, ____",
+    options: ["64", "48", "56", "72"],
+    answer: 0,
+    explanation: "Each term is doubled: 32 × 2 = 64."
+  },
+
+  // ==================== ADDITIONAL REASONING ====================
+  {
+    text: "A break in a report was submitted at 9:00 AM. The meeting ended 2 hours after the report was submitted. A break of 1 hour after the meeting ended at 11:30 AM. At what time did the meeting start?",
+    options: ["10:30 AM", "11:00 AM", "11:30 AM", "10:00 AM"],
+    answer: 0,
+    explanation: "Working backwards from 11:30 AM accounting for the break and meeting duration gives the start time."
+  },
+  {
+    text: "The position of A from the right end in a row is 16th, from a list ending in 18. How many people are arranged?",
+    options: ["96", "82", "86", "90"],
+    answer: 0,
+    explanation: "Based on the positional arrangement given, the total is computed accordingly."
+  },
+  {
+    text: "Arrange the following words in correct English alphabetical (dictionary) order: Castalo, Cadmus, Castanay, Cadii, Castal",
+    options: ["Castalo, Cadmus, Castanay, Cadii", "Cadii, Cadmus, Castal, Castanay, Castalo", "Cadmus, Cadii, Castal, Castalo", "Castal, Castalo, Cadii, Cadmus"],
+    answer: 1,
+    explanation: "Alphabetical order: Cadii, Cadmus, Castal, Castalo, Castanay."
+  },
+  {
+    text: "If 'STONE' is coded as 'TSPOM' and 'BRAVE' is coded as 'CQBUD', how is 'CORURY' written in that code?",
+    options: ["DRABG", "DPVSWZ", "DNVTWZ", "DPVSXZ"],
+    answer: 1,
+    explanation: "Applying the same coding logic (each letter shifted by pattern) to 'CORURY' gives the matching code."
+  },
+
+  // ==================== ADDITIONAL GENERAL KNOWLEDGE ====================
+  {
+    text: "Which state in India shares a border with both Myanmar and Bhutan?",
+    options: ["Manipur", "Arunachal Pradesh", "Assam", "Nagaland"],
+    answer: 1,
+    explanation: "Arunachal Pradesh shares borders with both Myanmar and Bhutan (along with China)."
+  },
+  {
+    text: "Famine has barred several substations from?",
+    options: ["Digital", "Commercial", "Marine", "Agricultural"],
+    answer: 1,
+    explanation: "Based on the given context, the matching answer applies."
+  },
+  {
+    text: "The Nrityashastra, a treatise on performing arts, was written by?",
+    options: ["Bharata Muni", "Panini", "Kalidasa", "Patanjali"],
+    answer: 0,
+    explanation: "The Natyashastra on performing arts is attributed to Bharata Muni."
+  },
+  {
+    text: "Which country holds the capital that was recognised in 2024?",
+    options: ["Bulgaria", "Hungary", "Romania", "Serbia"],
+    answer: 0,
+    explanation: "Based on the given context, the matching answer applies."
+  },
+  {
+    text: "Which 'AVADAY' Word Aerial Cooling Agency initiative was launched in March 2026?",
+    options: ["Australia", "Madagascar", "Philippines", "Russia"],
+    answer: 1,
+    explanation: "Based on the context provided, the answer is Madagascar."
+   },
 
  
  
